@@ -1,6 +1,6 @@
 import sys
 
-from PyQt5.QtWidgets import QListWidgetItem, QListWidget, QApplication
+from PySide6.QtWidgets import QListWidgetItem, QListWidget, QApplication
 
 
 if __name__ == '__main__':

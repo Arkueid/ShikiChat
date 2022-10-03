@@ -9,15 +9,15 @@ import sys
 import time
 import bs4
 from PIL import Image
-from PyQt5.QtWidgets import QMessageBox, QFileDialog, QListWidgetItem
-from PyQt5.QtCore import pyqtSignal, Qt
+from PySide6.QtWidgets import QMessageBox, QFileDialog, QListWidgetItem
+from PySide6.QtCore import Signal, Qt
 from .connector import Client
 from ..GUI import MessageBox, ChatRoom
 
 
 class GChat(ChatRoom):
-    pictureSent = pyqtSignal(QListWidgetItem)
-    textSent = pyqtSignal(QListWidgetItem)
+    pictureSent = Signal(QListWidgetItem)
+    textSent = Signal(QListWidgetItem)
 
     def __init__(self,user: str, target_user: str, client: Client, message_type="message"):
         """

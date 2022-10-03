@@ -1,16 +1,16 @@
 import time
-from PyQt5.QtCore import QObject, pyqtSignal
+from PySide6.QtCore import QObject, Signal
 
 
 class Signals(QObject):
-    receive_message = pyqtSignal(tuple)
-    receive_online_users = pyqtSignal()
-    receive_profile = pyqtSignal(dict)
-    receive_avatar = pyqtSignal(str)
-    doubleClicked = pyqtSignal()
-    receive_fri_req = pyqtSignal(tuple)
-    receive_fri_req_accepted = pyqtSignal(tuple)
-    fri_already_warning = pyqtSignal(str)
+    receive_message = Signal(tuple)
+    receive_online_users = Signal()
+    receive_profile = Signal(dict)
+    receive_avatar = Signal(str)
+    doubleClicked = Signal()
+    receive_fri_req = Signal(tuple)
+    receive_fri_req_accepted = Signal(tuple)
+    fri_already_warning = Signal(str)
 
 
 def get_curr_time(by='sec'):

@@ -4,13 +4,13 @@
 # Let's start coding!
 import sys
 
-from PyQt5.QtWidgets import QApplication, QWidget, QListWidgetItem, QListWidget, QPushButton, QLabel, QGridLayout, QFrame, QVBoxLayout
-from PyQt5.QtGui import QPixmap
-from PyQt5.QtCore import QSize, pyqtSignal
+from PySide6.QtWidgets import QApplication, QWidget, QListWidgetItem, QListWidget, QPushButton, QLabel, QGridLayout, QFrame, QVBoxLayout
+from PySide6.QtGui import QPixmap
+from PySide6.QtCore import QSize, Signal
 
 
 class btn(QPushButton):
-    clicked = pyqtSignal(tuple)
+    clicked = Signal(tuple)
     d = (None, )
 
     def mousePressEvent(self, e) -> None:

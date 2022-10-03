@@ -1,7 +1,7 @@
 import sys
-from PyQt5.QtWidgets import QFrame, QLabel, QWidget, QLineEdit, QPushButton, QGridLayout, QCheckBox, QMessageBox
-from PyQt5.QtGui import QPixmap, QPainter, QIcon,QRegExpValidator
-from PyQt5.QtCore import QRegExp
+from PySide6.QtWidgets import QFrame, QLabel, QWidget, QLineEdit, QPushButton, QGridLayout, QCheckBox, QMessageBox
+from PySide6.QtGui import QPixmap, QPainter, QIcon, QRegularExpressionValidator
+from PySide6.QtCore import QRegularExpression
 
 
 class RegisterPage(QFrame):
@@ -27,19 +27,19 @@ class RegisterPage(QFrame):
         self.button_back.setMinimumSize(100, 40)
         self.lineEdit_username = QLineEdit()
         self.lineEdit_username.setMinimumSize(120,30)
-        validator = QRegExpValidator(QRegExp("[a-zA-Z_0-9]{6,16}"))
+        validator = QRegularExpressionValidator(QRegularExpression("[a-zA-Z_0-9]{6,16}"))
         self.lineEdit_username.setValidator(validator)
         self.lineEdit_username.setPlaceholderText("6-16位仅包括数字、字母、下划线")
         self.lineEdit_password = QLineEdit()
         self.lineEdit_password.setMinimumSize(120,30)
         self.lineEdit_password.setEchoMode(self.lineEdit_password.Password)
-        validator = QRegExpValidator(QRegExp("[^\s]{6,16}"))
+        validator = QRegularExpressionValidator(QRegularExpression("[^\s]{6,16}"))
         self.lineEdit_password.setValidator(validator)
         self.lineEdit_password.setPlaceholderText("6-16位，不包含空格")
         self.lineEdit_check_password = QLineEdit()
         self.lineEdit_check_password.setMinimumSize(120, 30)
         self.lineEdit_check_password.setEchoMode(self.lineEdit_password.Password)
-        validator = QRegExpValidator(QRegExp("[^\s]{6,16}"))
+        validator = QRegularExpressionValidator(QRegularExpression("[^\s]{6,16}"))
         self.lineEdit_check_password.setValidator(validator)
         self.lineEdit_check_password.setPlaceholderText("6-16位，不包含空格")
         self.grid_main = QGridLayout(self)
@@ -101,8 +101,8 @@ class LoginPage(QFrame):
         self.lineEdit_password.setClearButtonEnabled(True)
 
         self.lineEdit_password.setEchoMode(self.lineEdit_password.Password)
-        self.lineEdit_username.setValidator(QRegExpValidator(QRegExp("[a-zA-Z0-9_]{6,16}")))
-        self.lineEdit_password.setValidator(QRegExpValidator(QRegExp("[^\s]{6,16}")))
+        self.lineEdit_username.setValidator(QRegularExpressionValidator(QRegularExpression("[a-zA-Z0-9_]{6,16}")))
+        self.lineEdit_password.setValidator(QRegularExpressionValidator(QRegularExpression("[^\s]{6,16}")))
         self.checkbox = QCheckBox('记住密码')
         self.btn_ConnectionSettings = QPushButton('连接配置')
         self.grid_main = QGridLayout(self)

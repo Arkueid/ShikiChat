@@ -1,8 +1,8 @@
 import sys
 from .user_profile_item import UserItem
-from PyQt5.QtWidgets import QListWidget, QApplication, QSplitter, QListWidgetItem, QVBoxLayout, QToolButton, QFrame, QAction, QHBoxLayout, QPushButton
-from PyQt5.QtCore import Qt, QSize
-from PyQt5.QtGui import QIcon
+from PySide6.QtWidgets import QListWidget, QApplication, QSplitter, QListWidgetItem, QVBoxLayout, QToolButton, QFrame, QHBoxLayout, QPushButton
+from PySide6.QtCore import Qt, QSize
+from PySide6.QtGui import QIcon, QAction
 
 
 class UserListWin:

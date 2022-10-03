@@ -1,5 +1,5 @@
 from .modules.mods import Hi
-from PyQt5.QtWidgets import QApplication
+from PySide6.QtWidgets import QApplication
 from sys import argv, exit
 
 

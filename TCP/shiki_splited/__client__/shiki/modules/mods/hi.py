@@ -3,7 +3,7 @@ Shiki本体
 """
 import os.path
 from .connector import Client
-from PyQt5.QtWidgets import QMessageBox, QInputDialog, QCompleter
+from PySide6.QtWidgets import QMessageBox, QInputDialog, QCompleter
 from .chatbody import ChatBody
 from .utils import UserList
 from ..GUI import Entrance

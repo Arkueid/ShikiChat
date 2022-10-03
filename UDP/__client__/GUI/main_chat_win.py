@@ -5,9 +5,9 @@ from .user_list_win import UserListWin
 from .chatroom import ChatRoom
 from .user_search_win import UserSearchWin
 from .mailbox_win import MailBoxWin
-from PyQt5.QtGui import QPixmap, QIcon
-from PyQt5.QtCore import Qt, QSize
-from PyQt5.QtWidgets import QFrame, QSplitter, QListWidgetItem, QApplication, QStatusBar
+from PySide6.QtGui import QPixmap, QIcon
+from PySide6.QtCore import Qt, QSize
+from PySide6.QtWidgets import QFrame, QSplitter, QListWidgetItem, QApplication, QStatusBar
 
 
 

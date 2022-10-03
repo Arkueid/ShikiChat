@@ -1,8 +1,8 @@
 import os
 import sys
-from PyQt5.QtWidgets import QLabel, QWidget, QVBoxLayout, QHBoxLayout, QGridLayout
-from PyQt5.QtGui import QPixmap
-from PyQt5.QtCore import Qt
+from PySide6.QtWidgets import QLabel, QWidget, QVBoxLayout, QHBoxLayout, QGridLayout
+from PySide6.QtGui import QPixmap
+from PySide6.QtCore import Qt
 
 
 class MessageBox(QWidget):
@@ -79,7 +79,7 @@ class MessageBox(QWidget):
 
 
 if __name__ == '__main__':
-    from PyQt5.QtWidgets import QApplication
+    from PySide6.QtWidgets import QApplication
 
     app = QApplication(sys.argv)
     win2 = MessageBox(sender="Artoria", receiver="Shiki", type_="send", content="Shit")

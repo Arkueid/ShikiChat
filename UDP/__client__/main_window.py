@@ -9,14 +9,14 @@ from modules.client_core import ClientCore
 from GUI.main_chat_win import MainChatWin
 from GUI.entrance import Entrance
 from GUI.info_page import InfoPage
-from PyQt5.QtWidgets import QApplication, QMessageBox, QFileDialog, QListWidget, QListWidgetItem
-from PyQt5.QtGui import QIcon, QPixmap
+from PySide6.QtWidgets import QApplication, QMessageBox, QFileDialog, QListWidget, QListWidgetItem
+from PySide6.QtGui import QIcon, QPixmap
 from modules.utils import Signals
 from GUI.chatroom import ChatRoom
 import threading
 from PIL import Image
 from modules.utils import get_curr_time
-from PyQt5.QtCore import QSize
+from PySide6.QtCore import QSize
 
 
 class Main:
@@ -25,8 +25,6 @@ class Main:
     signals = Signals()
 
     def __init__(self, send_core_addr, recv_core_addr):
-        # Qt 运行环境
-        self.app = QApplication(sys.argv)
         # 登录/注册窗口
         self.entrance_win = Entrance()
         # 资料窗口
@@ -42,7 +40,6 @@ class Main:
     def run(self):
         """启动窗口、主程序的入口"""
         self.entrance_win.show()
-        sys.exit(self.app.exec_())
 
     def handle_messages(self):
         """处理消息、放在子线程中运行"""
@@ -510,5 +507,8 @@ class Main:
 
 
 if __name__ == '__main__':
+    # Qt 运行环境
+    app = QApplication(sys.argv)
     test = Main(('localhost', 8091), ('localhost', 8092))
     test.run()
+    sys.exit(app.exec())

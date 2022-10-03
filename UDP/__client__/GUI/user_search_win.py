@@ -4,9 +4,9 @@
 # Let's start coding!
 import sys
 
-from PyQt5.QtCore import QSize
-from PyQt5.QtWidgets import QWidget, QListWidget, QListWidgetItem, QApplication, QPushButton, QLineEdit, QGridLayout
-from PyQt5.QtGui import QIcon, QPixmap
+from PySide6.QtCore import QSize
+from PySide6.QtWidgets import QWidget, QListWidget, QListWidgetItem, QApplication, QPushButton, QLineEdit, QGridLayout
+from PySide6.QtGui import QIcon, QPixmap
 
 
 class UserSearchWin:

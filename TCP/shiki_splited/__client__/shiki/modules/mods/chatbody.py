@@ -10,9 +10,9 @@ import time
 from threading import Thread
 
 from PIL import Image
-from PyQt5.QtCore import Qt, pyqtSignal
-from PyQt5.QtGui import QPainter, QPixmap
-from PyQt5.QtWidgets import QMessageBox, QWidget, QSplitter, QListWidget, QVBoxLayout, \
+from PySide6.QtCore import Qt, Signal
+from PySide6.QtGui import QPainter, QPixmap
+from PySide6.QtWidgets import QMessageBox, QWidget, QSplitter, QListWidget, QVBoxLayout, \
     QListWidgetItem, QFrame, QLabel, QHBoxLayout, QPushButton, QFileDialog
 from .connector import Client
 from .gchat import GChat
@@ -20,12 +20,12 @@ from ..GUI import MessageBox, UserItem
 
 
 class ChatBody(QWidget):
-    userListChanged = pyqtSignal()
-    getMessage = pyqtSignal(tuple)
-    userOffline = pyqtSignal(str)
-    connectionClosed = pyqtSignal()
-    timeCount = pyqtSignal()
-    infoUpdated = pyqtSignal(tuple)
+    userListChanged = Signal()
+    getMessage = Signal(tuple)
+    userOffline = Signal(str)
+    connectionClosed = Signal()
+    timeCount = Signal()
+    infoUpdated = Signal(tuple)
 
     def __init__(self, user: str, client: Client):
         super(ChatBody, self).__init__()
@@ -396,7 +396,7 @@ class ChatBody(QWidget):
 
 
 if __name__ == '__main__':
-    from PyQt5.QtWidgets import QApplication
+    from PySide6.QtWidgets import QApplication
     app = QApplication(sys.argv)
     # win = QListWidget()
     # item = QListWidgetItem()

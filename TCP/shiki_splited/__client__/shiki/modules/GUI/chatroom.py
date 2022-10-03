@@ -1,8 +1,8 @@
 import sys
-from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QWidget, QPushButton, QTextEdit, QCheckBox, QGridLayout, \
+from PySide6.QtGui import QIcon
+from PySide6.QtWidgets import QWidget, QPushButton, QTextEdit, QCheckBox, QGridLayout, \
     QSplitter, QFrame, QHBoxLayout, QListWidget, QListWidgetItem,  QAbstractItemView
-from PyQt5.QtCore import Qt
+from PySide6.QtCore import Qt
 from .messagebox import MessageBox
 
 

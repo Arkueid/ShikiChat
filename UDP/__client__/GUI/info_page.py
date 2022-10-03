@@ -1,9 +1,9 @@
 import sys
 import datetime
 import time
-from PyQt5.QtCore import Qt, QRegExp, QDateTime
-from PyQt5.QtWidgets import QWidget, QApplication, QGridLayout, QLineEdit, QPushButton, QLabel, QTextEdit, QDateEdit, QDateTimeEdit
-from PyQt5.QtGui import QPixmap, QRegExpValidator
+from PySide6.QtCore import Qt, QRegularExpression, QDateTime
+from PySide6.QtWidgets import QWidget, QApplication, QGridLayout, QLineEdit, QPushButton, QLabel, QTextEdit, QDateEdit, QDateTimeEdit
+from PySide6.QtGui import QPixmap, QRegularExpressionValidator
 
 
 class InfoPage(QWidget):
@@ -59,7 +59,7 @@ class InfoPage(QWidget):
         self.lbl_age = QLabel('年龄')
         self.ldt_age = QLineEdit()
         # self.ldt_age = QLineEdit()
-        self.ldt_age.setValidator(QRegExpValidator(QRegExp(r'^[^0][0-9]{0,2}')))
+        self.ldt_age.setValidator(QRegularExpressionValidator(QRegularExpression(r'^[^0][0-9]{0,2}')))
         self.ldt_age.setMinimumHeight(35)
         self.lbl_birthday = QLabel('生日')
         self.ldt_birthday = QDateEdit()

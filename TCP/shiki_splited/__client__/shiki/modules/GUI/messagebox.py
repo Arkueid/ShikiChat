@@ -1,9 +1,9 @@
 import os
 import sys
 
-from PyQt5.QtWidgets import QLabel, QWidget, QVBoxLayout, QHBoxLayout, QGridLayout
-from PyQt5.QtGui import QPixmap
-from PyQt5.QtCore import Qt
+from PySide6.QtWidgets import QLabel, QWidget, QVBoxLayout, QHBoxLayout, QGridLayout
+from PySide6.QtGui import QPixmap
+from PySide6.QtCore import Qt
 
 
 class MessageBox(QWidget):

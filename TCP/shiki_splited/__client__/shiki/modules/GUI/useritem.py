@@ -1,15 +1,15 @@
 import os.path
 import sys
-from PyQt5.QtWidgets import QWidget, QLabel, QListWidgetItem, QListWidget, QGridLayout
-from PyQt5.QtGui import QPixmap
-from PyQt5.QtCore import pyqtSignal, Qt
+from PySide6.QtWidgets import QWidget, QLabel, QListWidgetItem, QListWidget, QGridLayout
+from PySide6.QtGui import QPixmap
+from PySide6.QtCore import Signal, Qt
 
 
 class UserItem(QWidget):
-    clicked = pyqtSignal()
+    clicked = Signal()
 
     class MyLabel(QLabel):
-        clicked = pyqtSignal()
+        clicked = Signal()
 
         def __init__(self, text):
             super(UserItem.MyLabel, self).__init__(text=text)

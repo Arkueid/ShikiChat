@@ -1,7 +1,7 @@
 import sys
-from PyQt5.QtWidgets import QWidget, QLabel, QListWidgetItem, QListWidget, QGridLayout, QPushButton
-from PyQt5.QtGui import QPixmap
-from PyQt5.QtCore import Qt
+from PySide6.QtWidgets import QWidget, QLabel, QListWidgetItem, QListWidget, QGridLayout, QPushButton
+from PySide6.QtGui import QPixmap
+from PySide6.QtCore import Qt
 from UDP.__client__.modules.utils import Signals
 
 
@@ -40,7 +40,7 @@ class UserItem(QWidget):
 
 
 if __name__ == '__main__':
-    from PyQt5.QtWidgets import QApplication
+    from PySide6.QtWidgets import QApplication
 
     app = QApplication(sys.argv)
     list = QListWidget()

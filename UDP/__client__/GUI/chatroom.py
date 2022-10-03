@@ -1,8 +1,8 @@
 import sys
-from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QWidget, QPushButton, QTextEdit, QCheckBox, QGridLayout, \
+from PySide6.QtGui import QIcon
+from PySide6.QtWidgets import QWidget, QPushButton, QTextEdit, QCheckBox, QGridLayout, \
     QSplitter, QFrame, QHBoxLayout, QListWidget, QListWidgetItem,  QAbstractItemView
-from PyQt5.QtCore import Qt
+from PySide6.QtCore import Qt
 from .messagebox import MessageBox
 
 
@@ -91,7 +91,7 @@ class ChatRoom(QWidget):
 
 
 if __name__ == '__main__':
-    from PyQt5.QtWidgets import QApplication
+    from PySide6.QtWidgets import QApplication
     app = QApplication(sys.argv)
     i = QListWidgetItem()
     i.setIcon(QIcon('../default.png'))
